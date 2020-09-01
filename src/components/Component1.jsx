@@ -1,11 +1,25 @@
 import React from 'react'
+import {Spring} from 'react-spring/renderprops'
 
 export default function Component1() {
+
     return (
-        <div style={c1Style}>
-            <h1>Component 1</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur facilis eum sequi officia unde quis odit, rem et odio inventore eius quibusdam dignissimos architecto quam ea quia ex perferendis molestiae?</p>
-        </div>
+
+        <Spring
+        from={{ opacity: 0, marginTop: -500 }}
+        to={{ opacity: 1, marginTop: 0 }}>
+
+            { props => (
+                <div style={props}>
+                    <div style={c1Style}>
+                        <h1>Component 1</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur facilis eum sequi officia unde quis odit, rem et odio inventore eius quibusdam dignissimos architecto quam ea quia ex perferendis molestiae?</p>
+                    </div>
+                </div>
+            )}
+
+        </Spring>
+ 
     )
 }
 
