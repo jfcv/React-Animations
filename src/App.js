@@ -4,6 +4,11 @@ import Component2 from './components/Component2'
 import './App.css';
 
 function App() {
+
+  state = {
+    showComponent3: false
+  }
+
   return (
     <div className="App">
       <Component1 />
